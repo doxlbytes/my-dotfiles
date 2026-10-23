@@ -16,7 +16,7 @@
 
 @define-color theme_bg_color          #181818;
 @define-color theme_fg_color          #E4E4E4;
-@define-color theme_base_color        #1F1F1F;
+@define-color theme_base_color        #202020;
 @define-color theme_text_color        #E4E4E4;
 @define-color theme_selected_bg_color #303030;
 @define-color theme_selected_fg_color #E4E4E4;
@@ -120,7 +120,7 @@ button:checked {
 }
 
 button:disabled {
-    background: #1F1F1F;
+    background: #202020;
     color: #707070;
 
     border-color: #303030;
@@ -135,7 +135,7 @@ spinbutton,
 combobox,
 searchbar,
 searchentry {
-    background: #1F1F1F;
+    background: #202020;
     color: #E4E4E4;
 
     border: 1px solid #303030;
@@ -176,7 +176,7 @@ radiobutton {
 
 checkbutton check,
 radiobutton radio {
-    background: #1F1F1F;
+    background: #202020;
 
     border: 1px solid #3A3A3A;
     border-radius: 0;
@@ -203,7 +203,7 @@ menu,
 .menu,
 popover,
 popover.background {
-    background: #1F1F1F;
+    background: #202020;
     color: #E4E4E4;
 
     border: 1px solid #303030;
@@ -230,7 +230,7 @@ menuitem:hover {
    ========================================================= */
 
 tooltip {
-    background: #1F1F1F;
+    background: #202020;
     color: #E4E4E4;
 
     border: 1px solid #303030;
@@ -250,7 +250,7 @@ tooltip label {
 
 scale trough,
 progressbar trough {
-    background: #1F1F1F;
+    background: #202020;
 
     border: 1px solid #303030;
     border-radius: 0;

@@ -48,7 +48,7 @@ QPushButton:pressed {
 }
 
 QPushButton:disabled {
-    background: #1F1F1F;
+    background: #202020;
     color: #707070;
     border-color: #303030;
 }
@@ -58,7 +58,7 @@ QPushButton:disabled {
 QLineEdit,
 QTextEdit,
 QPlainTextEdit {
-    background: #1F1F1F;
+    background: #202020;
     color: #E4E4E4;
     border: 1px solid #333333;
     border-radius: 0;
@@ -100,7 +100,7 @@ QComboBox:focus {
 }
 
 QComboBox QAbstractItemView {
-    background: #1F1F1F;
+    background: #202020;
     color: #E4E4E4;
     border: 1px solid #333333;
     selection-background-color: #303030;
@@ -111,7 +111,7 @@ QComboBox QAbstractItemView {
 
 QSpinBox,
 QDoubleSpinBox {
-    background: #1F1F1F;
+    background: #202020;
     color: #E4E4E4;
     border: 1px solid #333333;
     border-radius: 0;
@@ -170,7 +170,7 @@ QSlider::handle:horizontal:hover {
 /* ---------- Progress bars ---------- */
 
 QProgressBar {
-    background: #1F1F1F;
+    background: #202020;
     color: #E4E4E4;
     border: 1px solid #333333;
     border-radius: 0;
@@ -185,7 +185,7 @@ QProgressBar::chunk {
 /* ---------- Menus ---------- */
 
 QMenu {
-    background: #1F1F1F;
+    background: #202020;
     color: #E4E4E4;
     border: 1px solid #333333;
     padding: 4px;
@@ -211,7 +211,7 @@ QMenu::separator {
 /* ---------- Context menus ---------- */
 
 QAbstractItemView {
-    background: #1F1F1F;
+    background: #202020;
     color: #E4E4E4;
     border: 1px solid #333333;
     selection-background-color: #303030;
@@ -227,7 +227,7 @@ QTabWidget::pane {
 }
 
 QTabBar::tab {
-    background: #1F1F1F;
+    background: #202020;
     color: #A8A8A8;
     border: 1px solid #333333;
     border-radius: 0;
