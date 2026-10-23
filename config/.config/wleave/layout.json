@@ -46,5 +46,5 @@
     "protocol": "layer-shell",
     "no-version-info": true,
     "delay-command-ms": 0,
-    "css": "/home/doxl/.config/wleave/style.css"
+    "css": ".config/wleave/style.css"
 }

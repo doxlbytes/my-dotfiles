@@ -24,4 +24,4 @@ end
 
 
 
-fish_add_path /home/doxl/.spicetify
+fish_add_path ~/.spicetify
