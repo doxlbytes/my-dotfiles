@@ -1,0 +1,36 @@
+#!/bin/bash
+
+DIR="$HOME/Pictures/Screenshots"
+mkdir -p "$DIR"
+
+TIME=$(date +"%Y-%m-%d_%H-%M-%S")
+FILE="$DIR/$TIME.png"
+
+case "$1" in
+    full)
+        grim "$FILE"
+        notify-send -i "$FILE" "Screenshot saved" "$FILE"
+        ;;
+
+    area)
+        GEOMETRY=$(slurp) || exit 0
+        grim -g "$GEOMETRY" "$FILE"
+        notify-send -i "$FILE" "Screenshot saved" "$FILE"
+        ;;
+
+    clip)
+        grim - | wl-copy --type image/png
+        notify-send "Screenshot copied"
+        ;;
+
+    clip-area)
+        GEOMETRY=$(slurp) || exit 0
+        grim -g "$GEOMETRY" - | wl-copy --type image/png
+        notify-send "Screenshot copied"
+        ;;
+
+    *)
+        echo "Usage: screenshot {full|area|clip|clip-area}"
+        exit 1
+        ;;
+esac

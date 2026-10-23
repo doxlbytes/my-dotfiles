@@ -1,0 +1,352 @@
+/**
+ * @name system24
+ * @description Monochrome dark system24 theme.
+ * @author refact0r
+ * @version 2.1.0
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/system24
+ * @source https://github.com/refact0r/system24/blob/master/theme/system24.theme.css
+ * @authorId 508863359777505290
+ * @authorLink https://www.refact0r.dev
+ */
+
+/* import theme modules */
+@import url('https://refact0r.github.io/system24/build/system24.css');
+
+
+/* =========================================================
+   SYSTEM24 CONFIG
+   ========================================================= */
+
+body {
+    /* font */
+    --font: 'JetBrainsMono Nerd Font';
+    --code-font: 'JetBrainsMono Nerd Font';
+
+    font-weight: 300;
+    letter-spacing: -0.05ch;
+
+    /* sizes */
+    --gap: 12px;
+    --divider-thickness: 4px;
+    --border-thickness: 1px;
+    --border-hover-transition: 0.2s ease;
+
+    /* animation */
+    --animations: on;
+    --list-item-transition: 0.18s ease;
+    --dms-icon-svg-transition: 0.35s ease;
+
+    /* top bar */
+    --top-bar-height: var(--gap);
+    --top-bar-button-position: titlebar;
+    --top-bar-title-position: off;
+    --subtle-top-bar-title: off;
+
+    /* window controls */
+    --custom-window-controls: off;
+    --window-control-size: 14px;
+
+    /* dms */
+    --custom-dms-icon: off;
+    --dms-icon-svg-url: url('');
+    --dms-icon-svg-size: 90%;
+    --dms-icon-color-before: var(--icon-subtle);
+    --dms-icon-color-after: var(--white);
+
+    --custom-dms-background: off;
+    --dms-background-image-url: url('');
+    --dms-background-image-size: cover;
+    --dms-background-color: var(--bg-2);
+
+    /* background */
+    --background-image: off;
+    --background-image-url: url('');
+
+    /* transparency */
+    --transparency-tweaks: off;
+    --remove-bg-layer: off;
+    --panel-blur: off;
+    --blur-amount: 12px;
+    --bg-floating: var(--bg-3);
+
+    /* other */
+    --small-user-panel: on;
+
+    /* shape */
+    --unrounding: on;
+    --round-pfp: off;
+    --remove-pfp-decor: off;
+
+    /* styling */
+    --custom-spotify-bar: on;
+    --ascii-titles: on;
+    --ascii-loader: system24;
+
+    /* panel labels */
+    --panel-labels: on;
+    --label-color: var(--text-muted);
+    --label-font-weight: 500;
+}
+
+
+/* =========================================================
+   MONOCHROME DARK
+   ========================================================= */
+
+:root {
+    --colors: on;
+
+
+    /* -----------------------------------------------------
+       TEXT
+       ----------------------------------------------------- */
+
+    --text-0: #181818;
+    --text-1: #E4E4E4;
+    --text-2: #D0D0D0;
+    --text-3: #B0B0B0;
+    --text-4: #858585;
+    --text-5: #666666;
+
+
+    /* -----------------------------------------------------
+       BACKGROUNDS
+       ----------------------------------------------------- */
+
+    /* main application */
+    --bg-1: #181818;
+
+    /* secondary surfaces */
+    --bg-2: #1E1E1E;
+
+    /* elevated surfaces */
+    --bg-3: #242424;
+
+    /* channel/sidebar base */
+    --bg-4: #1B1B1B;
+
+    /* floating elements */
+    --bg-floating: #282828;
+
+
+    /* -----------------------------------------------------
+       INTERACTION
+       ----------------------------------------------------- */
+
+    --hover: rgba(228, 228, 228, 0.055);
+    --active: rgba(228, 228, 228, 0.095);
+    --active-2: rgba(228, 228, 228, 0.145);
+
+    --message-hover: rgba(228, 228, 228, 0.035);
+
+
+    /* -----------------------------------------------------
+       ACCENT
+       ----------------------------------------------------- */
+
+    --accent-1: #E4E4E4;
+    --accent-2: #E4E4E4;
+    --accent-3: #C8C8C8;
+    --accent-4: #F0F0F0;
+    --accent-5: #FFFFFF;
+
+    --accent-new: #E4E4E4;
+
+
+    /* -----------------------------------------------------
+       MENTIONS
+       ----------------------------------------------------- */
+
+    --mention: linear-gradient(
+        to right,
+        rgba(228, 228, 228, 0.11) 0%,
+        rgba(228, 228, 228, 0.045) 55%,
+        transparent 100%
+    );
+
+    --mention-hover: linear-gradient(
+        to right,
+        rgba(228, 228, 228, 0.15) 0%,
+        rgba(228, 228, 228, 0.055) 55%,
+        transparent 100%
+    );
+
+
+    /* -----------------------------------------------------
+       REPLIES
+       ----------------------------------------------------- */
+
+    --reply: linear-gradient(
+        to right,
+        rgba(228, 228, 228, 0.075) 0%,
+        rgba(228, 228, 228, 0.025) 55%,
+        transparent 100%
+    );
+
+    --reply-hover: linear-gradient(
+        to right,
+        rgba(228, 228, 228, 0.105) 0%,
+        rgba(228, 228, 228, 0.035) 55%,
+        transparent 100%
+    );
+
+
+    /* -----------------------------------------------------
+       STATUS
+       ----------------------------------------------------- */
+
+    --online: #E4E4E4;
+    --dnd: #C8C8C8;
+    --idle: #A8A8A8;
+    --streaming: #858585;
+    --offline: #5E5E5E;
+
+
+    /* -----------------------------------------------------
+       BORDERS
+       ----------------------------------------------------- */
+
+    --border-light: rgba(228, 228, 228, 0.035);
+    --border: rgba(228, 228, 228, 0.075);
+    --border-hover: rgba(228, 228, 228, 0.22);
+
+    --button-border: rgba(228, 228, 228, 0.085);
+
+
+    /* -----------------------------------------------------
+       GRAYSCALE COLOR REPLACEMENTS
+       ----------------------------------------------------- */
+
+    --red-1: #E4E4E4;
+    --red-2: #C8C8C8;
+    --red-3: #A8A8A8;
+    --red-4: #858585;
+    --red-5: #666666;
+
+    --green-1: #E4E4E4;
+    --green-2: #C8C8C8;
+    --green-3: #A8A8A8;
+    --green-4: #858585;
+    --green-5: #666666;
+
+    --blue-1: #E4E4E4;
+    --blue-2: #C8C8C8;
+    --blue-3: #A8A8A8;
+    --blue-4: #858585;
+    --blue-5: #666666;
+
+    --yellow-1: #E4E4E4;
+    --yellow-2: #C8C8C8;
+    --yellow-3: #A8A8A8;
+    --yellow-4: #858585;
+    --yellow-5: #666666;
+
+    --purple-1: #E4E4E4;
+    --purple-2: #C8C8C8;
+    --purple-3: #A8A8A8;
+    --purple-4: #858585;
+    --purple-5: #666666;
+}
+
+
+/* =========================================================
+   EXTRA DEPTH
+   ========================================================= */
+
+/* subtle separation between major Discord surfaces */
+[class*="sidebar"] {
+    border-right: 1px solid rgba(228, 228, 228, 0.045);
+}
+
+[class*="membersWrap"] {
+    border-left: 1px solid rgba(228, 228, 228, 0.045);
+}
+
+
+/* channel hover */
+[class*="wrapper"][class*="modeSelectable"]:hover {
+    background: rgba(228, 228, 228, 0.055);
+}
+
+
+/* selected channel */
+[class*="wrapper"][class*="modeSelected"] {
+    background: rgba(228, 228, 228, 0.095);
+}
+
+
+/* selected channel hover */
+[class*="wrapper"][class*="modeSelected"]:hover {
+    background: rgba(228, 228, 228, 0.125);
+}
+
+
+/* message hover */
+[class*="message"]:hover {
+    background: rgba(228, 228, 228, 0.025);
+}
+
+
+/* code blocks */
+code,
+[class*="codeBlock"] {
+    background: #202020 !important;
+    border: 1px solid rgba(228, 228, 228, 0.065);
+}
+
+
+/* embeds / cards */
+[class*="embedFull"],
+[class*="container"][class*="card"] {
+    background: #202020;
+    border-color: rgba(228, 228, 228, 0.075);
+}
+
+
+/* popouts / menus */
+[class*="menu"],
+[class*="popout"] {
+    background: #242424;
+    border: 1px solid rgba(228, 228, 228, 0.09);
+}
+
+
+/* tooltips */
+[class*="tooltip"] {
+    background: #2A2A2A;
+    border: 1px solid rgba(228, 228, 228, 0.1);
+}
+
+
+/* buttons */
+button:hover {
+    border-color: rgba(228, 228, 228, 0.16);
+}
+
+
+/* text inputs */
+textarea,
+input {
+    background: #202020 !important;
+    border-color: rgba(228, 228, 228, 0.07);
+}
+
+textarea:focus,
+input:focus {
+    border-color: rgba(228, 228, 228, 0.20);
+}
+
+
+/* scrollbar */
+::-webkit-scrollbar-thumb {
+    background: #383838 !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4A4A4A !important;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent !important;
+}

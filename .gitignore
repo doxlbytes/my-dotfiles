@@ -1,0 +1,20 @@
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*token*
+*secret*
+
+# Runtime and cache
+.cache/
+*.log
+*.tmp
+
+# Editor and OS
+.DS_Store
+Thumbs.db
+
+# Machine-specific Fish variables
+config/.config/fish/fish_variables

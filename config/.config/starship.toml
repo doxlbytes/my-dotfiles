@@ -1,0 +1,58 @@
+add_newline = true
+
+format = '''
+[╭─●](#E4E4E4)  $username@$hostname $directory $git_branch$git_status$git_state ●$fill● $cmd_duration $time
+[╰─](#E4E4E4)$character$nix_shell '''
+
+[fill]
+symbol = '─'
+style = 'bold dimmed #E4E4E4'
+
+[character]
+success_symbol = '[▶︎](bold #E4E4E4)'
+error_symbol = '[✘](bold #707070)'
+
+[time]
+disabled = false
+time_format = '%H:%M'
+style = '#E4E4E4'
+format = '[󱑎 $time]($style)'
+
+[username]
+format = '[$user]($style)'
+style_root = 'bold #B0B0B0'
+style_user = 'bold #E4E4E4'
+show_always = true
+
+[hostname]
+format = '[$ssh_symbol$hostname]($style)'
+ssh_symbol = '󰌾 '
+ssh_only = false
+style = 'bold #E4E4E4'
+
+[directory]
+style = 'bold #E4E4E4'
+format = '[| 󰝰  $path]($style)'
+truncation_length = 4
+
+[git_branch]
+symbol = '󰊢'
+style = '#B0B0B0'
+format = ' [$symbol $branch]($style)'
+
+[git_status]
+style = '#909090'
+format = ' ([\[$all_status$ahead_behind\]]($style) )'
+
+[git_state]
+style = '#808080'
+
+[cmd_duration]
+min_time = 2000
+style = '#707070'
+format = '[󱎫 $duration]($style) 󰧄'
+
+[nix_shell]
+style = 'bold #A0A0A0'
+symbol = ' '
+format = 'via [$symbol$state( \($name\))]($style)  '

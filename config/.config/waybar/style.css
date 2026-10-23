@@ -1,0 +1,132 @@
+@define-color bg       #181818;
+@define-color surface  #1F1F1F;
+@define-color raised   #282828;
+@define-color selected #303030;
+@define-color border   #303030;
+
+@define-color text     #E4E4E4;
+@define-color text-2   #A8A8A8;
+@define-color text-3   #707070;
+
+* {
+    font-family: "JetBrainsMono Nerd Font Propo";
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: @bg;
+    color: @text;
+}
+
+/* ---------- Workspaces ---------- */
+
+#workspaces button {
+    padding: 2px 7px;
+    margin: 4px 0 4px 5px;
+
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    color: @text-2;
+}
+
+#workspaces button:hover {
+    background: @raised;
+    color: @text;
+}
+
+#workspaces button.active {
+    background: @text;
+    color: @bg;
+    font-weight: 700;
+}
+
+#workspaces button.urgent {
+    background: @text-2;
+    color: @bg;
+}
+
+/* ---------- Modules ---------- */
+
+#submap,
+#battery,
+#bluetooth,
+#network,
+#cpu,
+#memory,
+#tray,
+#volume {
+    padding: 3px 7px;
+    margin: 3px 7px 3px 0;
+
+    background: @surface;
+    border: 1px solid @border;
+    border-radius: 0;
+    box-shadow: none;
+
+    color: @text;
+}
+
+#submap {
+    background: @text-2;
+    color: @bg;
+}
+
+/* ---------- Volume Slider ---------- */
+
+#pulseaudio-slider {
+    padding: 0;
+    margin: 0 0 0 6px;
+}
+
+#pulseaudio-slider slider {
+    all: unset;
+
+    min-height: 0;
+    min-width: 0;
+
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+
+#pulseaudio-slider trough {
+    min-height: 6px;
+    min-width: 65px;
+
+    background: @border;
+    border-radius: 0;
+}
+
+#pulseaudio-slider highlight {
+    min-width: 8px;
+
+    background: @text;
+    border-radius: 0;
+}
+
+/* ---------- Media ---------- */
+
+#media {
+    color: @text;
+    margin: 4px 0 4px 50px;
+}
+
+/* ---------- Tooltip ---------- */
+
+tooltip {
+    background: @surface;
+    color: @text;
+
+    border: 1px solid @border;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+tooltip label {
+    color: @text;
+}
